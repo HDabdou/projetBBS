@@ -1,0 +1,23 @@
+h1{
+    color: #ffffff;
+    width: 75px;
+    font-style: normal;
+
+}
+
+body
+{
+
+    background-color: maroon;
+    color: white;
+
+}
+button{
+    background-color: #80081e;
+    align-items:center ;
+    color: white;
+}
+form{
+    font-style: italic;
+    align-items: center;
+}
