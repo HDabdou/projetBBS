@@ -2,6 +2,9 @@ h1{
     color: #ffffff;
     width: 75px;
     font-style: normal;
+    alignment: center;
+    align-items:center ;
+    text-align: right;
 
 }
 
@@ -20,4 +23,10 @@ button{
 form{
     font-style: italic;
     align-items: center;
+}
+input{
+
+}
+.cache{
+    display: none;
 }
