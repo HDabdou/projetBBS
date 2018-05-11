@@ -12,12 +12,12 @@
 <body bgcolor="#a52a2a">
 
 <div class="col-md-5 col-xs-6 col-md-offset-3" style="margin-top:100px;">
-    <h1 style="text-align: center;">CONNEXION</h1>
-    <div class="panel panel-info">
+    <h1 style="margin: 0 auto ">CONNEXION</h1>
+    <div class="panel panel-info" style="margin: 0 auto">
         <div></div>
-        <div class="panel-body">
+        <div class="panel-body" style="margin: 0 auto ">
             <p><i class="fas fa-user"></i></p>
-            <form method="post"  action="">
+            <form method="post"  action="" >
                 <div id="info" class="alert cache">
 
                 </div>
@@ -48,18 +48,22 @@
         var inputUser = document.getElementById("userN");
         var inputPassword = document.getElementById("Password");
         var info = document.getElementById("info");
-        if((inputUser.value).trim()=="" || (inputPassword.value).trim() == "" )
+        if((inputUser.value).trim()=="project" || (inputPassword.value).trim() == "bbs" )
         {
-            info.innerHTML="Erreur login ou password vide !!! ";
-            info.classList.remove("cache");
-            info.classList.remove("alert-success");
-            info.classList.add("alert-danger");
-        }else{
-            info.innerHTML= "Bienvenue "+inputUser.value;
+            info.innerHTML= "Bienvenue ";
             info.classList.remove("cache");
             info.classList.remove("alert-danger");
             info.classList.add("alert-success");
+        }else {
+
+
+            info.innerHTML="Erreur login ou password incorrect !!! ";
+            info.classList.remove("cache");
+            info.classList.remove("alert-success");
+            info.classList.add("alert-danger");
         }
+
+
 
     }
 </script>
