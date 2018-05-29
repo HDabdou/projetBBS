@@ -17,7 +17,7 @@
         <div></div>
         <div class="panel-body" style="margin: 0 auto ">
             <p><i class="fas fa-user"></i></p>
-            <form method="post"  action="" >
+            <form method="post"   >
                 <div id="info" class="alert cache">
 
                 </div>
@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="form-group" style="text-align: right;">
-                    <input class="btn btn-warning" type="button" onclick="showMessage()" name="connexion"id="connexion" value ="Connexion">
+                    <input class="btn btn-warning" type="button" onclick="ajax()" name="connexion"id="connexion" value ="Connexion">
                 </div>
 
             </form>
@@ -43,11 +43,11 @@
     </div>
 </div>
 <script>
+    var inputUser = document.getElementById("userN");
+    var inputPassword = document.getElementById("Password");
+    var info = document.getElementById("info");
 
     function showMessage(){
-        var inputUser = document.getElementById("userN");
-        var inputPassword = document.getElementById("Password");
-        var info = document.getElementById("info");
         if((inputUser.value).trim()=="project" || (inputPassword.value).trim() == "bbs" )
         {
             info.innerHTML= "Bienvenue ";
@@ -62,9 +62,20 @@
             info.classList.remove("alert-success");
             info.classList.add("alert-danger");
         }
+    }
+    var ajax = function(){
+        var xhttp=new XMLHttpRequest();
+        var params="login=abdou&password=pass";
 
+        xhttp.open("POST","server.php",true)
 
+        xhttp.onreadystatechange=function(){
+            if(this.readyState == 4 && this.status == 200){
+                alert(this.responseText);
+            }
 
+        }
+        xhttp.send(params);
     }
 </script>
 </body>
